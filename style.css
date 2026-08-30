@@ -95,8 +95,9 @@ nav a:hover {
 .restaurant-img {
     display: block;
     margin: 20px auto;
-    width: 350px;
-    border-radius: 15px;
+    width: 450px;
+    border-radius: 15px;max-width: 100%;
+
 }
 ul {list-style: none;
 padding: 0;}
@@ -351,4 +352,17 @@ section,
     space-between;
     align-items: center;
     text-align: left;
+}
+
+
+.restaurant-page h1 {
+    font-size: 45px;
+}
+
+
+@media (max-width: 600px) {
+    .restaurant-page h1 {
+        font-size: 36px;
+        overflow-wrap: break-word;
+    }
 }
