@@ -134,10 +134,13 @@ li:hover {
     border-radius: 10px;
     font-weight: bold;
     margin: 5px;
+    transition: transform0.2s;
 }
 
 .order-btn:hover {
     background-color: lightblue;
+    transform: scale(1.05);
+
 }
 
 @media (max-width: 600px) {
@@ -221,21 +224,131 @@ footer {
     margin-top: 30px;
 }
 
-/*Mobile responsive project cards*/
 @media (max-width: 600px) {
-    .projects {
-        width: 90%;
-        margin: auto;
-    }
-    .project-container {
-        display: grid;
-        grid-template-columns:
-        1fr;
-        gap: 20px;
+    #projects ul {
+        display: block;
+        padding: 0;
+        margin: 0;
     }
 
-    .project-card {
+    #projects li {
         width: 100%;
-        box-sizing: borderbox;
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
+
+    #projects a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
+/*Mobile text overflow fix */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p, h1, h2, h3, li, a {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section,
+.restaurant-container ,
+.restaurant-container section {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+
+    section,
+    .restaurant-container section
+    {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 3px;
+    }
+} 
+
+
+
+@media (max-width: 600px) {
+    #skills,
+    #hobbeis {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    #skills ul,
+    #hobbeis ul {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #skills li,
+    #hobbeis li {
+        width:100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin: 10px 0; 
+    }
+}
+
+/* Restaurant page text alignment
+*/
+.restaurant-page {
+    text-align: center;
+}
+
+.restaurant-page h1,
+.restaurant-page h2,
+.restaurant-page h3,
+.restaurant-page p {
+    text-align: center;
+}
+
+.restaurant-container section {
+    text-align: center;
+}
+
+
+.restaurant-container li {
+    display: flex;
+    justify-content:
+    space-between;
+    align-items: center;
+    text-align: left;
 }
